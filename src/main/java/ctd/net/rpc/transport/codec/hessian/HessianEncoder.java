@@ -35,6 +35,7 @@ public class HessianEncoder extends MessageToByteEncoder<Payload> {
 		finally{
 			h2out.close();
 			outs.close();
+			msg.setContentLength(out.readableBytes() - 1);
 		}
 	}
 

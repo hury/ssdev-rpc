@@ -71,6 +71,10 @@ public class Client {
 				}
 				try{
 					Result result = client.invoke(invocation);
+					
+					logBuilder.setOutboundBytes(invocation.getContentLength());
+					logBuilder.setInboundBytes(result.getContentLength());
+					
 					result.throwExpceptionIfHas();
 					v = result.getValue();
 					logBuilder.success(v);

@@ -27,6 +27,7 @@ public class JavaObjectEncoder extends MessageToByteEncoder<Payload> {
 		 }
 		 finally{
 			 oout.close();
+			 msg.setContentLength(out.readableBytes() - 1);
 		 }
 	}
 

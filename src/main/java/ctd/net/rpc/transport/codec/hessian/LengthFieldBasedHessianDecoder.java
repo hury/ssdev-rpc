@@ -6,6 +6,7 @@ import com.caucho.hessian.io.Hessian2Input;
 import com.caucho.hessian.io.HessianFactory;
 import com.caucho.hessian.io.SerializerFactory;
 
+import ctd.net.rpc.Payload;
 import ctd.net.rpc.transport.compression.CompressionUtils;
 
 import io.netty.buffer.ByteBuf;
@@ -29,13 +30,19 @@ public class LengthFieldBasedHessianDecoder extends LengthFieldBasedFrameDecoder
         if (frame == null) {
             return null;
         }
-        byte compression = in.readByte();
+        byte compression = frame.readByte();
+        int n = frame.readableBytes();
+        
         ByteBufInputStream bin = new ByteBufInputStream(frame);
         InputStream ins = CompressionUtils.buildInputStream(bin, compression);
         
         Hessian2Input h2in = hf.createHessian2Input(ins);
         try{
-        	return h2in.readObject();
+        	Payload payload =  (Payload) h2in.readObject();
+        	payload.setContentLength(n);
+        	payload.setCompression(compression);
+        	
+        	return payload;
         }
         finally{
         	h2in.close();

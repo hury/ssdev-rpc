@@ -20,6 +20,8 @@ public class InvokeLogBuilder {
 	private Throwable t;
 	private Object[] parameters;
 	private int retryCount;
+	private int outboundBytes;
+	private int inboundBytes;
 
 	public void setService(ServiceConfig service){
 		this.service = service;
@@ -71,6 +73,22 @@ public class InvokeLogBuilder {
 		this.retryCount = retryCount;
 	}
 	
+	public int getOutboundBytes() {
+		return outboundBytes;
+	}
+
+	public void setOutboundBytes(int outboundBytes) {
+		this.outboundBytes = outboundBytes;
+	}
+
+	public int getInboundBytes() {
+		return inboundBytes;
+	}
+
+	public void setInboundBytes(int inboundBytes) {
+		this.inboundBytes = inboundBytes;
+	}
+
 	public void writeLog(){
 		int logLevel = service.getProperty("logLevel", int.class, 1);
 		if(!LoggerManager.instance().loggerServiceEnabled() || logLevel == InvokeLogLevel.NONE){

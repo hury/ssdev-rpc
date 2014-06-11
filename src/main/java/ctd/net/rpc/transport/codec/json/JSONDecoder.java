@@ -6,6 +6,7 @@ import java.util.List;
 
 import com.alibaba.fastjson.JSON;
 
+import ctd.net.rpc.Payload;
 import ctd.net.rpc.transport.compression.CompressionUtils;
 
 import io.netty.buffer.ByteBuf;
@@ -25,7 +26,12 @@ public class JSONDecoder extends MessageToMessageDecoder<ByteBuf> {
 	    	int n = msg.readableBytes();
 	    	byte[] bytes = new byte[n];
 	    	ins.read(bytes, 0, n);
-	    	out.add(JSON.parse(bytes));
+	    	
+	    	Payload payload = (Payload)JSON.parse(bytes);
+	    	payload.setCompression(compression);
+	    	payload.setContentLength(n);
+	    	
+	    	out.add(payload);
 	    }
 	    finally{
 	    	ins.close();

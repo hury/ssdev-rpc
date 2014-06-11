@@ -22,10 +22,12 @@ public class JSONEncoder extends MessageToByteEncoder<Payload> {
 		OutputStream outs = CompressionUtils.buildOutputStream(bout, compression);
 		try{
 			byte[] bytes = JSON.toJSONBytes(msg, SerializerFeature.WriteClassName);
+			msg.setContentLength(bytes.length);
 			outs.write(bytes);
 		}
 		finally{
 			outs.close();
+			
 		}
 	}
 

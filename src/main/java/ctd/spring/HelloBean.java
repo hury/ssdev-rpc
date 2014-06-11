@@ -34,7 +34,10 @@ public class HelloBean implements TestInterface{
 //			e.printStackTrace();
 //		}
 		Map<String,Object> headers = ContextUtils.get(Context.RPC_INVOKE_HEADERS,Map.class);
-		return s  + headers.get("token");
+		if(headers != null){
+			return s  + headers.get("token");
+		}
+		return s;
 	}
 	
 	@RpcService

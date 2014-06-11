@@ -7,6 +7,7 @@ import com.caucho.hessian.io.Hessian2Input;
 import com.caucho.hessian.io.HessianFactory;
 import com.caucho.hessian.io.SerializerFactory;
 
+import ctd.net.rpc.Payload;
 import ctd.net.rpc.transport.compression.CompressionUtils;
 
 import io.netty.buffer.ByteBuf;
@@ -22,14 +23,16 @@ public class HessianDecoder extends MessageToMessageDecoder<ByteBuf> {
 
 	@Override
 	protected void decode(ChannelHandlerContext ctx, ByteBuf msg,List<Object> out) throws Exception {
-		byte compression = msg.readByte();
-	
+		 byte compression = msg.readByte();
+		 int n = msg.readableBytes();
 		 ByteBufInputStream bin = new ByteBufInputStream(msg);
 	     InputStream ins = CompressionUtils.buildInputStream(bin, compression);
 		 Hessian2Input h2in = hf.createHessian2Input(ins);
 	     try{
-	    	Object obj = h2in.readObject();
-	      	out.add(obj);
+	    	Payload payload = (Payload) h2in.readObject();
+	    	payload.setContentLength(n);
+	    	payload.setCompression(compression);
+	      	out.add(payload);
 	      }
 	      finally{
 	      	h2in.close();

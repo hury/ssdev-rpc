@@ -44,7 +44,10 @@ public class Dispatcher {
 			result = invoke(service,methodDesc,parameters);
 			filter.afterInvoke(result);
 		}
+		
 		result.setCorrelationId(invocation.getCorrelationId());
+		result.setCompression(invocation.getCompression());
+		
 		ContextUtils.clear();
 		return result;
 		
