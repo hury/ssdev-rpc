@@ -1,0 +1,102 @@
+<Opt_Recipe Name="门诊处方记录表">
+	<JZLSH>10375796</JZLSH>
+	<CFID>11323815</CFID>
+	<KFKSDM display="骨科专业" localCode="202" localText="骨科">0403</KFKSDM>
+	<CFZT display="正常" localCode="0" localText="正常">0</CFZT>
+	<CFLB display="西药" localCode="1" localText="西药">1</CFLB>
+	<KFSJ>2014-01-21 08:13:48</KFSJ>
+	<FYSJ>2014-01-21 08:32:32</FYSJ>
+	<Opt_RecipeDetails>
+		<Opt_RecipeDetail>
+			<CFMXHM>31636324</CFMXHM>
+			<XMBH>5735</XMBH>
+			<XMMC>洛索洛芬片[乐松]</XMMC>
+			<SFYP display="是" localCode="1" localText="是">1</SFYP>
+			<CDID>5735_01_6867</CDID>
+			<SYBBM>x030101001990007</SYBBM>
+			<ZH>1</ZH>
+			<CDMC>上海三共制药</CDMC>
+			<ZYBZ display="否" localCode="0" localText="否">0</ZYBZ>
+			<JXDM display="片剂(素片,压制片),浸膏片,非包衣片，半浸膏片，全粉片" localCode="23" localText="片剂">01</JXDM>
+			<JXMC>片剂    </JXMC>
+			<YPTYM>洛索洛芬片[乐松]</YPTYM>
+			<YPSPM>洛索洛芬片[乐松]</YPSPM>
+			<YPGG>60mg*20</YPGG>
+			<YPGGDW>盒</YPGGDW>
+			<YPGGXS>1</YPGGXS>
+			<FYSL>2.0</FYSL>
+			<FYDW>盒</FYDW>
+			<YYPD display="每天三次" localCode="tid" localText="每天3次">TID</YYPD>
+			<TJMC>口服</TJMC>
+			<TJDM display="口服" localCode="4" localText="口服">1</TJDM>
+			<YYTS>10</YYTS>
+			<JL>60.000</JL>
+			<DW display="毫克(mg)" localCode="2" localText="毫克(mg)">2</DW>
+			<MCSL>1</MCSL>
+			<MCDW display="片" localCode="1" localText="片">1</MCDW>
+			<SFPS display="否" localCode="0" localText="否">0</SFPS>
+			<XMDJ>28.8000</XMDJ>
+			<FYJE>57.60000</FYJE>
+		</Opt_RecipeDetail>
+		<Opt_RecipeDetail>
+			<CFMXHM>31636325</CFMXHM>
+			<XMBH>5811</XMBH>
+			<XMMC>金乌骨通胶囊</XMMC>
+			<SFYP display="是" localCode="1" localText="是">1</SFYP>
+			<CDID>5811_01_801</CDID>
+			<SYBBM>z011601006550001</SYBBM>
+			<ZH>2</ZH>
+			<CDMC>贵州神奇制药</CDMC>
+			<ZYBZ display="否" localCode="0" localText="否">0</ZYBZ>
+			<JXDM display="胶囊剂,硬胶囊" localCode="2" localText="胶囊">19</JXDM>
+			<JXMC>胶囊    </JXMC>
+			<YPTYM>金乌骨通胶囊</YPTYM>
+			<YPSPM>金乌骨通胶囊</YPSPM>
+			<YPGG>0.35g*60#</YPGG>
+			<YPGGDW>盒</YPGGDW>
+			<YPGGXS>1</YPGGXS>
+			<FYSL>2.0</FYSL>
+			<FYDW>盒</FYDW>
+			<YYPD display="每天三次" localCode="tid" localText="每天3次">TID</YYPD>
+			<TJMC>口服</TJMC>
+			<TJDM display="口服" localCode="4" localText="口服">1</TJDM>
+			<YYTS>10</YYTS>
+			<JL>1.050</JL>
+			<DW display="克(g)" localCode="1" localText="克(g)">1</DW>
+			<MCDW display="粒" localCode="3" localText="粒">3</MCDW>
+			<SFPS display="否" localCode="0" localText="否">0</SFPS>
+			<XMDJ>44.9000</XMDJ>
+			<FYJE>89.80000</FYJE>
+		</Opt_RecipeDetail>
+		<Opt_RecipeDetail>
+			<CFMXHM>31636326</CFMXHM>
+			<XMBH>4941</XMBH>
+			<XMMC>骨通贴膏</XMMC>
+			<SFYP display="是" localCode="1" localText="是">1</SFYP>
+			<CDID>4941_03_6605</CDID>
+			<SYBBM>z070202010630001</SYBBM>
+			<ZH>3</ZH>
+			<CDMC>桂林天和药业</CDMC>
+			<ZYBZ display="否" localCode="0" localText="否">0</ZYBZ>
+			<JXDM display="控释透皮剂,控释贴片,控释口颊片" localCode="13" localText="贴剂">66</JXDM>
+			<JXMC>贴剂    </JXMC>
+			<YPTYM>骨通贴膏</YPTYM>
+			<YPSPM>骨通贴膏</YPSPM>
+			<YPGG>7cm*10cm*5贴*2</YPGG>
+			<YPGGDW>盒</YPGGDW>
+			<YPGGXS>1</YPGGXS>
+			<FYSL>1.0</FYSL>
+			<FYDW>盒</FYDW>
+			<YYPD display="每天一次" localCode="qd" localText="每天1次">QD</YYPD>
+			<TJMC>外用      </TJMC>
+			<TJDM display="其他局部给药途径" localCode="15" localText="外用">699</TJDM>
+			<YYTS>5</YYTS>
+			<JL>2.000</JL>
+			<DW display="片" localCode="9" localText="片">9</DW>
+			<MCDW display="盒" localCode="7" localText="盒">7</MCDW>
+			<SFPS display="否" localCode="0" localText="否">0</SFPS>
+			<XMDJ>45.5000</XMDJ>
+			<FYJE>45.50000</FYJE>
+		</Opt_RecipeDetail>
+	</Opt_RecipeDetails>
+</Opt_Recipe>

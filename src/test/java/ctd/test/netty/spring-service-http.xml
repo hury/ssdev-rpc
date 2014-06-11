@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ssdev="http://www.bsoft.com.cn/schema/ssdev"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans   
+	http://www.springframework.org/schema/beans/spring-beans.xsd         
+	http://www.bsoft.com.cn/schema/ssdev
+	http://www.bsoft.com.cn/schema/ssdev/ssdev.xsd">
+	<ssdev:applicationDomain name="chis" registryAddress="zookeeper://localhost:2181" rpcServerWorkUrl="hessian://localhost:8081/" enableLogger="false"/>
+	<ssdev:connector url="http://localhost:9001?codec=hessian"/>
+	<ssdev:service id="hello" class="ctd.spring.HelloBean" />
+	
+</beans>
